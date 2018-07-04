@@ -13,7 +13,7 @@ router.post('/api/create', [authorize, validate], (req, res) => {
   if (req.body.shorthand) {
     shorthand = req.body.shorthand
 
-    db.set(req.body.shorthand, originalUrl)
+    db.set(shorthand, originalUrl)
   } else {
     shorthand = randomUrl()
 
